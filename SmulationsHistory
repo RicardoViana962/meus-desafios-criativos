@@ -1,0 +1,23 @@
+src/hooks/useSimulationHistory.ts
+
+export interface SimulationData {
+  income: number
+  fixedExpenses: number
+  variableExpenses: number
+  goal: string
+  goalValue: number
+  deadline: string
+}
+
+export interface AIResult {
+  diagnosis: string
+  recommendations: string[]
+  nextSteps: string[]
+}
+
+export interface SimulationHistory {
+  id: string
+  createdAt: string
+  data: SimulationData
+  result: AIResult
+}
