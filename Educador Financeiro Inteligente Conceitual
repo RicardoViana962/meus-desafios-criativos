@@ -1,0 +1,87 @@
+## Proposta: Educador Financeiro Inteligente para Jovens Universitários
+
+O **Educador Financeiro Inteligente** será uma aplicação frontend que funciona como um assistente financeiro pessoal para jovens universitários. O sistema deve ajudar o usuário a **organizar seus gastos, evitar gastar mais do que ganha no início do mês e criar metas simples de economia**.
+
+### Principais funcionalidades
+
+* **Controle inteligente de gastos:** permitir o registro de receitas e despesas, organizando automaticamente os gastos por categorias como alimentação, transporte, estudos e lazer.
+* **Planejamento e metas:** apresentar quanto o usuário pode gastar durante o mês e permitir a criação de metas, como economizar R$ 50 por mês ou guardar dinheiro para uma compra específica.
+* **Recomendações personalizadas:** analisar os hábitos financeiros e apresentar sugestões práticas, alertas e pequenas mudanças que podem ajudar o usuário a economizar.
+
+### Comunicação
+
+A comunicação deve ser **clara, amigável, motivadora, simples e sem julgamentos**, utilizando uma linguagem adequada ao público jovem.
+
+### Formato das respostas
+
+As respostas devem ser apresentadas de forma **curta e prática**, preferencialmente contendo:
+
+**Situação → Insight → Ação recomendada**
+
+Exemplo:
+
+> 💡 **Atenção:** você já gastou 70% do seu orçamento de lazer.
+> 🎯 **Sugestão:** tente limitar os gastos de lazer a R$ 20 nesta semana.
+> 💰 **Resultado esperado:** você terá mais dinheiro disponível até o final do mês.
+
+### Evitar
+
+Evite **linguagem técnica ou excessivamente formal, recomendações genéricas, julgamentos sobre os hábitos do usuário e sugestões que comprometam gastos essenciais**. O sistema também não deve incentivar investimentos de alto risco como solução rápida para problemas financeiros.
+
+---
+
+## Ideias para transformar em um projeto frontend interativo
+
+1. **Dashboard financeiro**
+
+   * Saldo disponível
+   * Gastos do mês
+   * Valor economizado
+   * Progresso das metas
+   * Gráfico simples de despesas por categoria
+
+2. **“Posso gastar?”**
+
+   * O usuário informa o valor que pretende gastar.
+   * A IA analisa o orçamento restante.
+   * Exibe uma resposta como: **“Pode, mas isso representa 15% do seu dinheiro disponível.”**
+
+3. **Desafio dos 30 dias**
+
+   * Criar pequenos desafios de economia.
+   * Exemplo: “Fique 3 dias sem pedir delivery.”
+   * Barra de progresso e sistema de conquistas.
+
+4. **Assistente financeiro**
+
+   * Interface semelhante a um chat.
+   * O usuário pode perguntar: *“Posso gastar R$ 80 no fim de semana?”*
+   * O assistente responde considerando os dados financeiros cadastrados.
+
+5. **Metas visuais**
+
+   * Criar uma meta com nome, valor e prazo.
+   * Mostrar uma barra de progresso.
+   * Exemplo: **“Notebook — R$ 1.500 / R$ 3.000 — 50%”**.
+
+6. **Simulador “E se eu economizar?”**
+
+   * O usuário escolhe um valor semanal.
+   * A interface mostra quanto poderá acumular em 1, 3, 6 ou 12 meses.
+
+7. **Sistema de gamificação**
+
+   * Pontos por registrar despesas.
+   * Medalhas por cumprir metas.
+   * Sequência de dias acompanhando os gastos.
+   * Níveis como **Iniciante → Organizado → Econômico → Mestre das Finanças**.
+
+8. **Design responsivo e jovem**
+
+   * Cards, gráficos simples, barras de progresso e microinterações.
+   * Interface limpa para funcionar bem tanto no celular quanto no desktop.
+   * Feedback visual imediato após registrar uma despesa ou atingir uma meta.
+
+**Conceito central:** transformar educação financeira em uma experiência **visual, interativa e cotidiana**, em vez de apresentar apenas tabelas e números.
+
+O conceito central transforma a educação financeira em uma experiência visual e cotidiana, e ganha ainda mais clareza quando o frontend organiza essas interações em um fluxo de telas para o dashboard, o assistente e as metas coerente.
