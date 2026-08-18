@@ -1,0 +1,76 @@
+src/hooks/useSimulationHistory.ts
+
+import { useEffect, useState } from 'react'
+import type {
+  AIResult,
+  SimulationData,
+  SimulationHistory,
+} from '../types/simulation'
+
+const STORAGE_KEY = 'planejai:simulation-history'
+
+export function useSimulationHistory() {
+  const [history, setHistory] = useState<SimulationHistory[]>([])
+
+  useEffect(() => {
+    const storedHistory = localStorage.getItem(STORAGE_KEY)
+
+    if (!storedHistory) {
+      return
+    }
+
+    try {
+      const parsedHistory = JSON.parse(storedHistory)
+
+      if (Array.isArray(parsedHistory)) {
+        setHistory(parsedHistory)
+      }
+    } catch {
+      localStorage.removeItem(STORAGE_KEY)
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(history))
+  }, [history])
+
+  function addSimulation(
+    data: SimulationData,
+    result: AIResult,
+  ) {
+    const simulation: SimulationHistory = {
+      id: crypto.randomUUID(),
+      createdAt: new Date().toISOString(),
+      data,
+      result,
+    }
+
+    setHistory((currentHistory) => [
+      simulation,
+      ...currentHistory,
+    ])
+
+    return simulation.id
+  }
+
+  function removeSimulation(id: string) {
+    setHistory((currentHistory) =>
+      currentHistory.filter((simulation) => simulation.id !== id),
+    )
+  }
+
+  function getSimulation(id: string) {
+    return history.find(
+      (simulation) => simulation.id === id,
+    )
+  }
+
+  return {
+    history,
+    addSimulation,
+    removeSimulation,
+    getSimulation,
+  }
+}
+localStorage.getItem(...)
+localStorage.setItem(...)
